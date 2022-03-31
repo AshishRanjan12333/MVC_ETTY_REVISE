@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MVC_ETTY_REVISE.Models.Location>
+@{ }
+<table class=" table table-bordered">
+    <tr>
+        <th>Place</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        @foreach (var location in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="CustomerList" asp-controller="customer" asp-route-id="@location.Id">@location.Place </a>
+                </td>
+                <td>
+                    @location.Details
+                </td>
+
+
+            </tr>
+        }
+    }
+</table>
